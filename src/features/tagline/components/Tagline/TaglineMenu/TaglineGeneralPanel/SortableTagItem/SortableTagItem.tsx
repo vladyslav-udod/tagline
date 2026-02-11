@@ -37,7 +37,6 @@ export const SortableTagItem: React.FC<{
           icon={<CloseIcon />}
           title="Remove"
           onClick={(e) => onRemove(e, tag.label)}
-          size="sm"
         />
       </StyledPanelTaglineItemText>
     </StyledPanelTaglineItem>

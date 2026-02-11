@@ -16,7 +16,7 @@ export const Popover: React.FC<PopoverProps> = ({
   open,
   onOpen,
   onClose,
-  placement = "left",
+  placement = "right",
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 

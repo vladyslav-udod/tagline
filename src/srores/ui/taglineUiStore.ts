@@ -10,9 +10,11 @@ import {
 } from "@/features/tagline/constants";
 
 const mockTags: TagItem[] = [
-  { label: "Tag 1", link: "https://example.com/tag1" },
-  { label: "Tag 2", link: "https://example.com/tag2" },
-  { label: "Tag 3", link: "https://example.com/tag3" },
+  { label: "Marketing", link: "https://example.com/tag1" },
+  { label: "Design", link: "https://example.com/tag2" },
+  { label: "Development", link: "https://example.com/tag3" },
+  { label: "Front", link: "https://example.com/tag4" },
+  { label: "AI Engineering ", link: "https://example.com/tag5" },
 ];
 
 export class TaglineUiStore {

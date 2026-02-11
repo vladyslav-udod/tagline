@@ -4,17 +4,20 @@ import { theme } from "../../styles/theme";
 export const StyledLabel = styled.label<{ $isError?: boolean }>`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-  height: 3rem;
+  height: 47px;
   border: 1px solid
     ${({ $isError }) => ($isError ? theme.colors.error : theme.colors.border)};
   border-radius: ${theme.borderRadius};
-  padding: 0 12px;
-  background-color: ${theme.colors.background};
+  padding: 4px 12px 6px 12px;
+  background-color: ${theme.colors.inputBackground};
+  font-weight: ${theme.fontWeights.medium};
 
   span {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: ${theme.fontWeights.medium};
+    line-height: 16px;
     color: rgba(255, 255, 255, 0.65);
   }
 `;
@@ -27,4 +30,5 @@ export const StyledInput = styled.input`
   border: none;
   outline: none;
   height: 24px;
+  line-height: 16px;
 `;

@@ -55,7 +55,7 @@ export const styleConfigRules = {
     `,
     M: `
       font-size: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 8px 20px;
     `,
     S: `
       font-size: 0.875rem;

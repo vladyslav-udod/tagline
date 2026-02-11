@@ -1,17 +1,31 @@
 export const theme = {
   colors: {
     primary: "#157BDAED",
-    secondary: "#2a2a2a",
+    secondary: "#30302E",
+    extraLight: "#4F4F4F",
     background: "#262624",
+
     border: "rgba(233, 236, 246, 0.07)",
     white: "#FFFFFF",
-    hover: "#141414",
+
+    hover: "#3A3A3A",
+    doubleHover: "#444444",
+
+    iconButton: "#8A8A8A",
+    inputBackground: "#393939",
     error: "#FF9696",
+
+    activeStyle: "#353535",
   },
   fontSizes: {
     small: "0.875rem", // 14px
     medium: "1rem", // 16px
     large: "1.5rem", // 24px
+  },
+  fontWeights: {
+    normal: 400,
+    medium: 500,
+    bold: 600,
   },
   spacing: {
     xs: "0.25rem", // 4px
@@ -22,6 +36,6 @@ export const theme = {
   },
   borderRadius: "6px",
   shadows: {
-    popover: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    popover: "0px 80px 80px 0px rgba(0, 0, 0, 0.15)",
   },
 };

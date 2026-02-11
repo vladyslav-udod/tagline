@@ -9,6 +9,7 @@ export const StyledChip = styled.div<{ selected?: boolean }>`
   ${styleConfigRules.variants.variant1}
   ${styleConfigRules.sizes.M}
   ${styleConfigRules.radiuses.r8}
+  font-weight: ${theme.fontWeights.medium};
 
   color: ${theme.colors.white};
   overflow: hidden;
@@ -18,7 +19,4 @@ export const StyledChip = styled.div<{ selected?: boolean }>`
   transition:
     background-color 0.2s,
     color 0.2s;
-  &:hover {
-    opacity: 0.8;
-  }
 `;

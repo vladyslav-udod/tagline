@@ -10,7 +10,7 @@ export const StyledIconButton = styled.button<{ size: "sm" | "md" | "lg" }>`
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border-radius: 50%;
+  border-radius: ${theme.borderRadius};
   border: none;
   color: ${theme.colors.white};
 

@@ -14,14 +14,18 @@ export const StyledTaglineMenuHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 ${theme.spacing.sm};
+  padding: 0 11px 0 8px;
   border-bottom: 1px solid ${theme.colors.border};
+
+  svg {
+    color: ${theme.colors.iconButton};
+  }
 
   .drag-x-icon {
     position: absolute;
     left: calc(50% - ${theme.spacing.sm});
     top: 0;
-    cursor: grab;
+    color: ##383839;
   }
 `;
 
@@ -36,19 +40,19 @@ export const StyledTaglineMenuFooter = styled.div`
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   height: 48px;
-  padding: 0 ${theme.spacing.md};
-  gap: ${theme.spacing.sm};
+  padding: 0 14px;
+  gap: 14px;
   cursor: pointer;
   border-top: 1px solid ${theme.colors.border};
 
-  &: hover {
-    background: ${theme.colors.background};
+  p {
+    font-weight: ${theme.fontWeights.medium};
   }
 
   .arrow-right-icon {
     position: absolute;
-    right: ${theme.spacing.sm};
-    color: ${theme.colors.white};
+    right: 14px;
+    color: ${theme.colors.iconButton};
     transform: rotate(180deg);
   }
 `;

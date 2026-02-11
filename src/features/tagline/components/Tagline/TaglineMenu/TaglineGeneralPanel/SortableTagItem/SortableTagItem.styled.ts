@@ -15,7 +15,7 @@ export const StyledPanelTaglineItem = styled.div`
     position: absolute;
     cursor: grab;
     left: 0;
-    color: rgba(255, 255, 255, 0.45);
+    color: ${theme.colors.extraLight};
     display: none;
   }
 
@@ -28,25 +28,34 @@ export const StyledPanelTaglineItemText = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  border-radius: 4px;
+  border-radius: ${theme.borderRadius};
   height: 100%;
-  padding: 0 ${theme.spacing.sm};
+  padding: 0 0 0 12px;
   cursor: pointer;
+  &:hover .remove-btn {
+    display: flex;
+  }
 
   p {
     width: calc(100% - ${theme.spacing.lg});
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 1.4rem;
   }
 
   .remove-btn {
     position: absolute;
-    right: ${theme.spacing.md};
-    color: ${theme.colors.white};
+    right: 12px;
+    color: ${theme.colors.iconButton};
+    display: none;
+
+    &: hover {
+      background: ${theme.colors.doubleHover};
+    }
   }
 
   &: hover {
-    background: ${theme.colors.background};
+    background: ${theme.colors.hover};
   }
 `;

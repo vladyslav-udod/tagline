@@ -7,22 +7,26 @@ export const StyledTaglinePanelBody = styled.div`
   padding: 14px 0;
   max-height: 26rem;
   overflow-y: auto;
+  gap: ${theme.spacing.sm} 0;
 `;
 
 export const StyledAddNewItem = styled.div`
   display: flex;
   align-items: center;
-  gap: ${theme.spacing.sm};
-  padding: ${theme.spacing.sm} ${theme.spacing.sm} ${theme.spacing.sm}
-    ${theme.spacing.lg};
+  gap: ${theme.spacing.md};
+  padding: ${theme.spacing.sm};
   color: rgba(255, 255, 255, 0.45);
   cursor: pointer;
-  width: 100%;
   height: 40px;
   min-height: 40px;
-  margin-top: ${theme.spacing.xs};
+  border-radius: ${theme.borderRadius};
+  margin: 0 14px;
+
+  svg {
+    margin-left: 4px;
+  }
 
   &:hover {
-    color: ${theme.colors.white};
+    background: ${theme.colors.hover};
   }
 `;

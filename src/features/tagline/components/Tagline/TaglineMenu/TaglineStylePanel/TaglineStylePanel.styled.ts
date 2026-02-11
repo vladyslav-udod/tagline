@@ -73,7 +73,7 @@ export const StyledStyleSection = styled.div<{ $noBorder?: boolean }>`
       background-color: initial;
 
       &.active-btn {
-        background-color: #353535;
+        background-color: ${theme.colors.activeStyle};
       }
     }
   }

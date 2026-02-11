@@ -6,8 +6,8 @@ export const CloseIcon = (props: Props) => (
   <svg
     viewBox="0 0 16 16"
     fill="currentColor"
-    width="1em"
-    height="1em"
+    width="16px"
+    height="16px"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >

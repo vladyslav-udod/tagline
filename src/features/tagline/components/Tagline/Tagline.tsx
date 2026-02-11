@@ -14,25 +14,12 @@ interface TaglineProps {
 
 export const Tagline: React.FC<TaglineProps> = observer(({ tags }) => {
   const handleOpen = () => taglineUiStore.openMenu(TaglineMenuOptions.General);
-  const handleOpenEditTag = (
-    e: React.MouseEvent<HTMLDivElement>,
-    tag: TagItem,
-  ) => {
-    e.stopPropagation();
-    taglineUiStore.openMenu(TaglineMenuOptions.EditTag);
-    taglineUiStore.setActiveTag(tag);
-  };
 
   const tagsContent = (
     <StyledTagline $styleConfig={taglineUiStore.styleConfig}>
       {tags.length ? (
         tags.map((tag) => (
-          <Chip
-            key={tag.label}
-            label={tag.label}
-            className="chip"
-            onClick={(e) => handleOpenEditTag(e, tag)}
-          />
+          <Chip key={tag.label} label={tag.label} className="chip" />
         ))
       ) : (
         <p className="empty-info">No tags available. Click to add one.</p>
@@ -43,7 +30,7 @@ export const Tagline: React.FC<TaglineProps> = observer(({ tags }) => {
   return (
     <Popover
       trigger={tagsContent}
-      placement="left"
+      placement="right"
       open={taglineUiStore.activeMenu !== null}
       onOpen={handleOpen}
       onClose={() => taglineUiStore.closeMenu()}

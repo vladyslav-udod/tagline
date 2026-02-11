@@ -23,6 +23,7 @@ export const InputField: React.FC<InputFieldProps> = ({
     <StyledLabel $isError={isError}>
       <span>{label}</span>
       <StyledInput
+        name="label"
         type="text"
         value={value}
         onChange={handleChange}

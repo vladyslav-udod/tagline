@@ -6,7 +6,7 @@ export const ContainerStyled = styled.div`
   display: inline-block;
 `;
 
-const marginWidth = "calc(100% + 2rem)";
+const marginWidth = "100%";
 
 export const PopoverContentStyled = styled.div<{
   open: boolean;
@@ -24,14 +24,14 @@ export const PopoverContentStyled = styled.div<{
   background: ${theme.colors.secondary};
   border-radius: ${theme.borderRadius};
   box-shadow: ${theme.shadows.popover};
+  backdrop-filter: blur(348px);
+  -webkit-backdrop-filter: blur(348px);
   z-index: 100;
   width: 17.5rem;
   opacity: ${({ open }) => (open ? 1 : 0)};
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   pointer-events: ${({ open }) => (open ? "auto" : "none")};
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(4px)")};
   transition:
     opacity 0.2s ease,
-    transform 0.2s ease,
     visibility 0.2s ease;
 `;

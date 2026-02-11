@@ -4,18 +4,12 @@ import type { StyleConfig } from "../../models/tagline";
 import { styleConfigRules } from "../../constants";
 
 export const StyledTagline = styled.ul<{ $styleConfig: StyleConfig }>`
-  width: 40rem;
+  width: 400px;
   display: flex;
   flex-wrap: wrap;
   gap: ${theme.spacing.sm};
-  padding: 3rem 2rem;
   cursor: pointer;
   ${({ $styleConfig }) => `${styleConfigRules.alignments[$styleConfig.align]}`}
-  border: 1px dashed transparent;
-
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.1);
-  }
 
   .chip {
     ${({ $styleConfig }) =>

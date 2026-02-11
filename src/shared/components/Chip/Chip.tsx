@@ -8,24 +8,29 @@ export interface ChipProps {
   className?: string;
 }
 
+const MAX_WIDTH = 250;
+
 export const Chip: React.FC<ChipProps> = ({
   label,
   selected = false,
   onClick,
   className,
 }) => {
+  const onMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    el.title = el.getBoundingClientRect().width >= MAX_WIDTH ? label : "";
+  };
+  const onMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.title = "";
+  };
+
   return (
     <StyledChip
       selected={selected}
       onClick={onClick}
       className={className}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget;
-        el.title = el.getBoundingClientRect().width >= 250 ? label : "";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.title = "";
-      }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {label}
     </StyledChip>

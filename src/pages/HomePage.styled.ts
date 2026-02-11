@@ -4,9 +4,9 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 11.875rem;
+  margin-top: 189.4px;
 `;
 
 export const StyledTaglineContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 116.6px;
 `;

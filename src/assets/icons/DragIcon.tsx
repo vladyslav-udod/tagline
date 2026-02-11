@@ -5,8 +5,8 @@ type Props = React.SVGProps<SVGSVGElement>;
 export const DragIcon = (props: Props) => (
   <svg
     viewBox="0 0 12 16"
-    width="1em"
-    height="1em"
+    width="16px"
+    height="16px"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
     {...props}

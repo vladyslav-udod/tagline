@@ -13,28 +13,35 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    // DM Sans is used as a substitute for Circular Std
-    font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+    font-family: "Onest", system-ui, -apple-system, sans-serif;
     font-size: ${theme.fontSizes.medium};
+    font-weight: ${theme.fontWeights.normal};
     color: ${theme.colors.white};
     background-color: ${theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
 
   h1 {
-    font-weight: 600;
     line-height: 1.2;
     font-size:  4rem;
   }
 
   h2 {
     font-size:  3rem;
-    font-weight: 450;
   }
 
   h3 {
-    font-size:  2.5rem;
-    font-weight: 450;
+    font-size:  38px;
+    line-height: 1.4;
+    letter-spacing: -0.0044em;
+    font-weight: ${theme.fontWeights.medium};
+  }
+
+  h5 {
+    font-size:  1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: ${theme.fontWeights.bold};
   }
 
   a {
@@ -44,7 +51,8 @@ export const GlobalStyles = createGlobalStyle`
   
   p {
     line-height: 1.5;
-    font-size: ${theme.fontSizes.small};
+    line-height: 1.4;
+    letter-spacing: -0.0044em;
   }
 
   button {
