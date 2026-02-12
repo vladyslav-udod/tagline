@@ -21,16 +21,10 @@ import {
   SortableContext,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
+import { restrictToParentElement } from "@dnd-kit/modifiers";
 import { SortableTagItem } from "./SortableTagItem";
-import { useState } from "react";
 
 export const TaglineGeneralPanel: React.FC = observer(() => {
-  const [isDragging, setIsDragging] = useState(false);
-
-  const handleDragStart = () => {
-    setIsDragging(true);
-  };
-
   const handleTagClick = (tag: TagItem) => {
     taglineUiStore.openMenu(TaglineMenuOptions.EditTag);
     taglineUiStore.setActiveTag(tag);
@@ -44,7 +38,6 @@ export const TaglineGeneralPanel: React.FC = observer(() => {
   const sensors = useSensors(useSensor(PointerSensor));
 
   const handleDragEnd = (event: DragEndEvent) => {
-    setIsDragging(false);
     const { active, over } = event;
     if (!over || active.id === over.id) {
       return;
@@ -65,7 +58,7 @@ export const TaglineGeneralPanel: React.FC = observer(() => {
       sensors={sensors}
       collisionDetection={closestCenter}
       onDragEnd={handleDragEnd}
-      onDragStart={handleDragStart}
+      modifiers={[restrictToParentElement]}
     >
       <SortableContext
         items={taglineUiStore.tags.map((t) => t.label)}
@@ -78,7 +71,6 @@ export const TaglineGeneralPanel: React.FC = observer(() => {
               tag={tag}
               onClick={handleTagClick}
               onRemove={handleTagRemove}
-              isDragging={isDragging}
             />
           ))}
 

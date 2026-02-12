@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@/shared/styles/theme";
 
-export const StyledPanelTaglineItem = styled.div`
+export const StyledPanelTaglineItem = styled.div<{ $isDragging?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,13 +10,21 @@ export const StyledPanelTaglineItem = styled.div`
   width: 100%;
   height: 40px;
   min-height: 40px;
+  z-index: ${({ $isDragging }) => ($isDragging ? 9 : "auto")};
 
   .drag-icon {
     position: absolute;
     cursor: grab;
     left: 0;
     color: ${theme.colors.extraLight};
-    display: none;
+    opacity: ${({ $isDragging }) => ($isDragging ? 1 : 0)};
+    visibility: ${({ $isDragging }) => ($isDragging ? "visible" : "hidden")};
+    transition: opacity 0.2s ease;
+  }
+
+  &:hover .drag-icon {
+    opacity: 1;
+    visibility: visible;
   }
 
   &:hover > svg {

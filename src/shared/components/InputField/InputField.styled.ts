@@ -16,9 +16,10 @@ export const StyledLabel = styled.label<{ $isError?: boolean }>`
 
   span {
     font-size: 12px;
-    font-weight: ${theme.fontWeights.medium};
-    line-height: 16px;
     color: rgba(255, 255, 255, 0.65);
+    line-height: 16px;
+    font-weight: ${theme.fontWeights.medium};
+    font-family: ${theme.fonts.primary};
   }
 `;
 
@@ -31,4 +32,6 @@ export const StyledInput = styled.input`
   outline: none;
   height: 24px;
   line-height: 16px;
+  font-family: ${theme.fonts.primary};
+  font-weight: ${theme.fontWeights.medium};
 `;

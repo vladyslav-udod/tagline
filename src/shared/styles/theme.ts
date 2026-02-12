@@ -17,6 +17,9 @@ export const theme = {
 
     activeStyle: "#353535",
   },
+  fonts: {
+    primary: "'Onest'",
+  },
   fontSizes: {
     small: "0.875rem", // 14px
     medium: "1rem", // 16px

@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: "Onest", system-ui, -apple-system, sans-serif;
+    font-family: ${theme.fonts.primary}, system-ui, -apple-system, sans-serif;
     font-size: ${theme.fontSizes.medium};
     font-weight: ${theme.fontWeights.normal};
     color: ${theme.colors.white};
